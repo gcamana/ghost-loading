@@ -1,17 +1,63 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Social Card</ion-title>
+    <ion-buttons right>
+      <button ion-button icon-only (click)="refresh()">
+        <ion-icon name="refresh"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content padding class="cards-bg social-cards">
+  <ion-card>
+
+    <ion-item>
+      <ion-avatar item-start>
+        <cs-ghost class="img isLoading">
+          <img src="https://unsplash.it/80/80?image=1012">
+        </cs-ghost>
+      </ion-avatar>
+      <cs-ghost class="sm isLoading">
+        <h2>Marty McFly</h2>
+      </cs-ghost>
+      <cs-ghost class="lg isLoading">
+        <p>November 5, 1955</p>
+      </cs-ghost>
+    </ion-item>
+    <cs-ghost class="img square isLoading">
+      <img src="https://unsplash.it/300/200?image=344">
+    </cs-ghost>
+    <ion-card-content>
+      <cs-ghost class="paragraph isLoading">
+        <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?!
+          Whoa. This is heavy.</p>
+      </cs-ghost>
+    </ion-card-content>
+    <ion-row>
+      <ion-col>
+        <cs-ghost class="lg isLoading">
+          <button ion-button color="primary" clear small icon-start>
+              <ion-icon name='thumbs-up'></ion-icon>
+              12 Likes
+            </button>
+        </cs-ghost>
+      </ion-col>
+      <ion-col>
+        <cs-ghost class="lg isLoading">
+          <button ion-button color="primary" clear small icon-start>
+            <ion-icon name='text'></ion-icon>
+            4 Comments
+          </button>
+        </cs-ghost>
+      </ion-col>
+      <ion-col align-self-center text-center>
+        <cs-ghost class="lg isLoading">
+          <ion-note>
+            11h ago
+          </ion-note>
+        </cs-ghost>
+      </ion-col>
+    </ion-row>
+  </ion-card>
 </ion-content>
